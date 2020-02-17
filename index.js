@@ -37,4 +37,6 @@ const walls = [
 ];
 World.add(world, walls);
 
-World.add(world, Bodies.rectangle(200, 200, 50, 50));
+for (let i = 0; i < 20; i++) {
+  World.add(world, Bodies.rectangle(200, 200, 50, 50));
+}
