@@ -21,3 +21,5 @@ const walls = [
   Bodies.rectangle(800, 300, 40, 600, { isStatic: true })
 ];
 World.add(world, walls);
+
+World.add(world, Bodies.rectangle(200, 200, 50, 50));
