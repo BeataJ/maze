@@ -25,21 +25,3 @@ const walls = [
   Bodies.rectangle(800, 300, 40, 600, { isStatic: true })
 ];
 World.add(world, walls);
-
-for (let i = 0; i < 35; i++) {
-  if (Math.random() > 0.5) {
-    World.add(
-      world,
-      Bodies.rectangle(Math.random() * width, Math.random() * height, 50, 50)
-    );
-  } else {
-    World.add(
-      world,
-      Bodies.circle(Math.random() * width, Math.random() * height, 35, {
-        render: {
-          fillStyle: 'grey'
-        }
-      })
-    );
-  }
-}
