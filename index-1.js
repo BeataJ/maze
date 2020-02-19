@@ -1,6 +1,6 @@
 const { Engine, Render, Runner, World, Bodies } = Matter;
 
-const cells = 5;
+const cells = 3;
 const width = 600;
 const height = 600;
 
@@ -41,8 +41,35 @@ const horizontals = Array(cells - 1)
   .fill(null)
   .map(() => Array(cells).fill(false));
 
+const startRow = Math.floor(Math.random() * cells);
+const startColumn = Math.floor(Math.random() * cells);
+
+const stepThroughCell = (row, column) => {
+  // if i have visited  the cell at [raw, column], then return
+  if (grid[row][column]) {
+    return;
+  }
+
+  // Mark this cell as being visited
+  grid[row][column] = true;
+
+  // Assemble randomly-ordered list of neighbors
+
+  // for each neighbor....
+
+  // See if that neighbor is out of bounds
+
+  // If we have visited that neighbor, continue to next neighbor
+
+  // Remove a wall from either horizontals or verticals
+
+  // visit that next cell
+};
+
+stepThroughCell(startRow, startColumn);
 console.log(grid);
 
+// ------------------------------------
 // for (let i = 0; i < 3; i++) {
 //   grid.push([]);
 //   for (let j = 0; j < 3; j++) {
