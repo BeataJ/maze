@@ -71,16 +71,16 @@ const stepThroughCell = (row, column) => {
 
   // Assemble randomly-ordered list of neighbors
   const neighbors = shuffle([
-    [row - 1, column],
-    [row, column + 1],
-    [row + 1, column],
-    [row, column - 1]
+    [row - 1, column, 'up'],
+    [row, column + 1, 'right'],
+    [row + 1, column, 'down'],
+    [row, column - 1, 'left']
   ]);
   console.log(neighbors);
 
   // for each neighbor....
   for (let neighbor of neighbors) {
-    const [nextRow, nextColumn] = neighbor;
+    const [nextRow, nextColumn, direction] = neighbor;
 
     // See if that neighbor is out of bounds
     if (
@@ -102,7 +102,7 @@ const stepThroughCell = (row, column) => {
   // visit that next cell
 };
 
-stepThroughCell(startRow, startColumn);
+stepThroughCell(1, 1);
 
 // ------------------------------------
 // for (let i = 0; i < 3; i++) {
