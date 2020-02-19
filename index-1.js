@@ -108,12 +108,22 @@ const stepThroughCell = (row, column) => {
       horizontals[row][column] = true;
     }
 
+    // visit that next cell
     stepThroughCell(nextRow, nextColumn);
   }
-  // visit that next cell
 };
 
 stepThroughCell(startRow, startColumn);
+
+horizontals.forEach(row => {
+  row.forEach(open => {
+    if (open) {
+      return;
+    }
+
+    const wall = Badies.rectangle();
+  });
+});
 
 // ------------------------------------
 // for (let i = 0; i < 3; i++) {
