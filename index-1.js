@@ -1,6 +1,6 @@
 const { Engine, Render, Runner, World, Bodies } = Matter;
 
-const cells = 3;
+const cells = 6;
 const width = 600;
 const height = 600;
 
@@ -155,10 +155,5 @@ verticals.forEach((row, rowIndex) => {
   });
 });
 
-// ------------------------------------
-// for (let i = 0; i < 3; i++) {
-//   grid.push([]);
-//   for (let j = 0; j < 3; j++) {
-//     grid[i].push(false);
-//   }
-// }
+const goal = Bodies.rectangle();
+World.add(world, goal);
