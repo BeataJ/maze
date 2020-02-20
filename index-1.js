@@ -149,6 +149,7 @@ verticals.forEach((row, rowIndex) => {
       10,
       unitLength,
       {
+        label: 'wall',
         isStatic: true
       }
     );
