@@ -175,16 +175,21 @@ document.addEventListener('keydown', e => {
   const { x, y } = ball.velocity;
   console.log(x, y);
 
+  // up
   if (e.keyCode === 38) {
     Body.setVelocity(ball, { x, y: y - 5 });
   }
+  // down
   if (e.keyCode === 40) {
-    console.log('move down');
+    Body.setVelocity(ball, { x, y: y + 5 });
   }
+  // right
   if (e.keyCode === 39) {
-    console.log('move right');
+    Body.setVelocity(ball, { x: x + 5, y });
   }
+
+  // left
   if (e.keyCode === 37) {
-    console.log('move left');
+    Body.setVelocity(ball, { x: x - 5, y });
   }
 });
