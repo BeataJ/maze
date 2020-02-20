@@ -170,3 +170,18 @@ World.add(world, goal);
 // Ball
 const ball = Bodies.circle(unitLength / 2, unitLength / 2, unitLength * 0.25);
 World.add(world, ball);
+
+document.addEventListener('keydown', e => {
+  if (e.keyCode === 38) {
+    console.log('move ball up');
+  }
+  if (e.keyCode === 40) {
+    console.log('move down');
+  }
+  if (e.keyCode === 39) {
+    console.log('move right');
+  }
+  if (e.keyCode === 37) {
+    console.log('move left');
+  }
+});
