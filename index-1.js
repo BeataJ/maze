@@ -1,6 +1,6 @@
-const { Engine, Render, Runner, World, Bodies } = Matter;
+const { Engine, Render, Runner, World, Bodies, Body } = Matter;
 
-const cells = 6;
+const cells = 15;
 const width = 600;
 const height = 600;
 
@@ -172,8 +172,11 @@ const ball = Bodies.circle(unitLength / 2, unitLength / 2, unitLength * 0.25);
 World.add(world, ball);
 
 document.addEventListener('keydown', e => {
+  const { x, y } = ball.velocity;
+  console.log(x, y);
+
   if (e.keyCode === 38) {
-    console.log('move ball up');
+    Body.setVelocity(ball, { x, y: y - 5 });
   }
   if (e.keyCode === 40) {
     console.log('move down');
