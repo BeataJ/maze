@@ -194,3 +194,11 @@ document.addEventListener('keydown', e => {
     Body.setVelocity(ball, { x: x - 5, y });
   }
 });
+
+// Win Condition
+
+Events.on(engine, 'collisionStart', e => {
+  e.pairs.forEach(collision => {
+    console.log(collision);
+  });
+});
