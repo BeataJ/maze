@@ -1,7 +1,7 @@
 const { Engine, Render, Runner, World, Bodies, Body, Events } = Matter;
 
-const cellsHorizontal = 15;
-const cellsVertical = 10;
+const cellsHorizontal = 5;
+const cellsVertical = 6;
 const width = window.innerWidth;
 const height = window.innerHeight;
 
@@ -230,4 +230,10 @@ Events.on(engine, 'collisionStart', e => {
       });
     }
   });
+});
+
+// New Game
+const btn = document.querySelector('button');
+btn.addEventListener('click', e => {
+  console.log('click');
 });
